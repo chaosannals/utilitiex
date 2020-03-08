@@ -1,0 +1,40 @@
+{
+  "name": "utilitiex",
+  "version": "1.0.0",
+  "description": "yat some js libraries.",
+  "author": {
+    "name": "chaosannals",
+    "email": "chaosannals@outlook.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaosannals/utilitiex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chaosannals/utilitiex/issues"
+  },
+  "homepage": "https://github.com/chaosannals/utilitiex#readme",
+  "keywords": [
+    "js",
+    "library"
+  ],
+  "dependencies": {
+    "core-js": "^3.6.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "build": "webpack --mode=production --config webpack.config.js",
+    "serve": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js"
+  }
+}
