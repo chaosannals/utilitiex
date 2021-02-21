@@ -1,7 +1,12 @@
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const developed = process.env.NODE_ENV == 'development';
+
+const packageInfo = fs.readFileSync(path.resolve(__dirname, 'package.json'));
+const packageSetting = JSON.parse(packageInfo);
+const version = packageSetting.version;
 
 const configuration = {
     target: 'web',
@@ -28,7 +33,7 @@ const configuration = {
                 NODE_ENV: process.env.NODE_ENV,
             }
         }),
-        new webpack.BannerPlugin('https://github.com/chaosannals/utilitiex [name] copyright © 2020 Chen Shen Chao')
+        new webpack.BannerPlugin(` [name] ${version}\r\n copyright © 2020 Chen Shen Chao\r\n https://github.com/chaosannals/utilitiex`)
     ],
 };
 
